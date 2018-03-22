@@ -1,0 +1,24 @@
+{
+  "name": "bootcamptracker",
+  "version": "1.0.0",
+  "description": "track bootcamp results(Science Man)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcyttw/BootcampTracker.git"
+  },
+  "keywords": [
+    "bootcamp",
+    "tracker"
+  ],
+  "author": "Dennis Chi, Tom LaChance, Quintessa Anderson, Eric Steinman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcyttw/BootcampTracker/issues"
+  },
+  "homepage": "https://github.com/dcyttw/BootcampTracker#readme"
+}
