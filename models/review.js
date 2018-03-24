@@ -34,13 +34,13 @@ module.exports = function(sequelize, DataTypes) {
       },
 
       jobPosition: {
-          types: DataTypes.STRING,
+          type: DataTypes.STRING,
           allowNull: false,
 
       },
 
       salaryRange: {
-          types: DataTypes.INTEGER,
+          type: DataTypes.INTEGER,
           allowNull: false
           
       },
