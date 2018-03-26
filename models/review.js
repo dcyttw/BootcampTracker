@@ -1,11 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
     var Review = sequelize.define("Review", {
-      ReviewID: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true
-      },
+      // ReviewID: {
+      //   type: DataTypes.INTEGER,
+      //   allowNull: false,
+      //   autoIncrement: true,
+      //   primaryKey: true,
+        
+      // },
 
       bootcampName: {
           type: DataTypes.STRING,
@@ -44,10 +45,6 @@ module.exports = function(sequelize, DataTypes) {
           allowNull: false
           
       },
-
-    //   overallExperience: {
-      // NEED TO RESEARCH HOW TO CALCULATE AVERAGE
-    //   }
 
     });
 

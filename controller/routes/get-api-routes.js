@@ -1,4 +1,4 @@
-var Review = require("../models/review.js");
+var Review = require("../../models/review.js");
 
 module.exports = function(app) {
 
