@@ -1,9 +1,8 @@
-var Review = require("../../models/review.js");
-
+var db = require("../../models");
 module.exports = function(app) {
 
     app.get("/", function(req, res){
-        Review.FindAll(function (data) {
+        db.Review.FindAll(function (data) {
             console.log("View all review data");            
             var reviewObject = {
             reviewData: data
@@ -23,7 +22,7 @@ module.exports = function(app) {
         // Sequelize queries are asynchronous, which helps with perceived speed.
         // If we want something to be guaranteed to happen after the query, we'll use
         // the .then function
-        Review.findAll({}).then(function(results) {
+        db.Review.findAll({}).then(function(results) {
             console.log("Find All");
           // results are available to us inside the .then
           return res.json(results);
