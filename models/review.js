@@ -46,6 +46,11 @@ module.exports = function(sequelize, DataTypes) {
           
       },
 
+      overallExperience: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      }
+
     });
 
     return Review;

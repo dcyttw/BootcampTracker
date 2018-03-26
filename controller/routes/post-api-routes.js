@@ -7,15 +7,18 @@ app.post("/api/new/review", function(req, res) {
     
         console.log("Review Data:");
         console.log(req.body);
+
+        var index = req.body;
     
         db.Review.create({
-          bootcampName: req.body.bootcampName,
-          curriculum: parseInt(req.body.curriculum),
-          instructor: parseInt(req.body.instructor),
-          jobAssistance: parseInt(req.body.jobAssistance),
-          jobFound: req.body.jobFound, 
-          jobPosition: req.body.jobPosition,
-          salaryRange: parseInt(req.body.salaryRange)
+          bootcampName: index.bootcampName,
+          curriculum: parseInt(index.curriculum),
+          instructor: parseInt(index.instructor),
+          jobAssistance: parseInt(index.jobAssistance),
+          jobFound: index.jobFound, 
+          jobPosition: index.jobPosition,
+          salaryRange: parseInt(index.salaryRange),
+          overallExperience: parseInt(index.overallExperience)
         }).then(function(results) {
           console.log(results);
           // `results` here would be the newly created review
