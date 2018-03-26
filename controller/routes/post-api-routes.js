@@ -1,4 +1,4 @@
-var Review = require("../../models/review.js");
+var db = require("../../models");
 
 module.exports = function(app) {
 
@@ -8,14 +8,14 @@ app.post("/api/new/review", function(req, res) {
         console.log("Review Data:");
         console.log(req.body);
     
-        Review.create({
+        db.Review.create({
           bootcampName: req.body.bootcampName,
-          curriculum: req.body.curriculum,
-          instructor: req.body.instructor,
-          jobAssistance: req.body.jobAssistance,
+          curriculum: parseInt(req.body.curriculum),
+          instructor: parseInt(req.body.instructor),
+          jobAssistance: parseInt(req.body.jobAssistance),
           jobFound: req.body.jobFound, 
           jobPosition: req.body.jobPosition,
-          salaryRange: req.body.salaryRange
+          salaryRange: parseInt(req.body.salaryRange)
         }).then(function(results) {
           console.log(results);
           // `results` here would be the newly created review
