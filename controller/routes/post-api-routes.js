@@ -1,9 +1,9 @@
-var Review = require("../models/review.js");
+var Review = require("../../models/review.js");
 
 module.exports = function(app) {
 
 // Add a review
-app.post("/api/new", function(req, res) {
+app.post("/api/new/review", function(req, res) {
     
         console.log("Review Data:");
         console.log(req.body);
@@ -17,6 +17,7 @@ app.post("/api/new", function(req, res) {
           jobPosition: req.body.jobPosition,
           salaryRange: req.body.salaryRange
         }).then(function(results) {
+          console.log(results);
           // `results` here would be the newly created review
         //   res.end();
           return res.redirect("/");
