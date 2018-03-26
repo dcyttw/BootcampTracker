@@ -191,7 +191,8 @@
                 <div class="box wow fadeInRight">
                   <div class="icon"><img src="img/northwestern-logo.jpg" alt="northwestern"></div>
                   <h4 class="title"><a href="https://bootcamp.northwestern.edu/coding/" target="blank">Northwestern Coding Boot Camp</a></h4>
-                  <p class="description">Northwestern's curriculum includes HTML5, CSS3, JavaScript, jQuery, Bootstrap, Express.js, React.js, Node.js, Database Theory, Bookshelf.js, MongoDB, MySQL, Command Line, Git, and Python.</p>
+                  <p class="description">Northwestern University is a 12-week full time or 24-week part time full stack web development bootcamp that focuses on HTML5, CSS3, JavaScript, jQuery, Bootstrap, Express.js, React.js, Node.js and more.</p>
+                    <!-- Database Theory, Bookshelf.js, MySQL, MongoDB, Command Line, Git, and Python.</p>                 -->
                 </div>
               </div>
 
@@ -616,37 +617,56 @@
 
           <div class="col-lg-7 col-md-8">
             <div class="form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="sendmessage">Your review has been sent. Thank you!</div>
               <div id="errormessage"></div>
               <form action="/api/new/review" method="post" role="form" class="reviewForm">
                 <div class="form-row">
                   <div class="form-group col-lg-6">
-                    <input type="text" name="bootcampName" class="form-control bootcampName" id="bootcampName" placeholder="Type in Your Bootcamp Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <input type="text" name="bootcampName" class="form-control bootcampName form-text" id="bootcampName-input" style="text-align:center;" placeholder="Please type in your Bootcamp name." data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div class="validation"></div>
                   </div>
+
+
+                  <!-- <h3><strong>Question 1</strong></h3> --> -->
+                  <h6>Please rate the curriculum on a scale of 1-5, with 5 being the highest rating.</h6>
+                  <select class="chosen-select" id="q1">
+                    <option value="">1</option>
+                    <option value="1"></option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Highest Rating)</option>
+                  </select>
+
+
+                  <!-- <div class="form-group col-lg-6">
+                    <input type="text" class="form-control curriculum form-text" name="curriculum" id="curriculum-input" style="text-align:center;" placeholder="Please rate the curriculum on a scale of 1-5" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validation"></div>
+                  </div> -->
                   <div class="form-group col-lg-6">
-                    <input type="text" class="form-control" name="curriculum" id="curriculum" placeholder="Rate the curriculum" data-rule="email" data-msg="Please enter a valid email" />
+                      <input type="text" name="jobFound" class="form-control jobFound form-text" id="jobFound-input" style="text-align:center;" placeholder="Did you find a job after graduation?" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                      <div class="validation"></div>
+                    </div>
+                <div class="form-group col-lg-6">
+                  <input type="text" class="form-control instructor form-text" name="instructor" id="instructor-input" style="text-align:center;" placeholder="Please rate the instructor on a scale of 1-5"data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group col-lg-6">
+                  <input type="text" name="jobAssistance" size="200" class="form-control jobAsst form-text" id="jobAssistance-input" style="text-align:center;" placeholder="Please rate the job-assitance on a scale of 1 - 5." data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+              
+                
+                <div class="form-group col-lg-6">
+                  <input type="text" name="salaryRange" class="form-control salary form-text" id="salaryRange-input" style="text-align:center;" placeholder="Please type in Your salary range" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group col-lg-6">
+                    <input type="text" name="jobPosition" class="form-control jobPosition form-text" id="jobPosition-input" style="text-align:center;" placeholder="Please type your current job position" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div class="validation"></div>
                   </div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="instructor" id="instructor" placeholder="Rate the instructor" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
                 <div class="form-group col-lg-6">
-                  <input type="text" name="jobAssistance" class="form-control" id="jobAssistance" placeholder="Please Rate the job assitance" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group col-lg-6">
-                  <input type="text" name="jobFound" class="form-control" id="" placeholder="Did you find a job after graduation?" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group col-lg-6">
-                  <input type="text" name="jobPosition" class="form-control" id="" placeholder="Your current position" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group col-lg-6">
-                  <input type="text" name="salaryRange" class="form-control" id="" placeholder="Type in Your salary range" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="overallExperience" class="form-control experience form-text" id="experience-input" style="text-align:center;" placeholder="Please rate your overall experience" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
                 <!-- <div class="form-group">
