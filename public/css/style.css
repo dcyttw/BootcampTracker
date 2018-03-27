@@ -627,10 +627,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 18px;
 }
 
-#bootcamps-overview h4 a {
-  color: #111;
-}
-
 #bootcamps-overview p {
   font-size: 14px;
   margin-left: 100px;
@@ -676,9 +672,21 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 28px;
 }
 
-#aggregated-statistics h4 {
+h4 {
   font-size: 46px;
   color: #1dc8cd;
+  font-weight: 300;
+}
+
+#coding-dojo h4, #northwestern h4 {
+  font-size: 46px;
+  color: white;
+  font-weight: 300;
+}
+
+#fullstack-academy h4 {
+  font-size: 46px;
+  color: white;
   font-weight: 300;
 }
 
@@ -780,6 +788,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
 }
 
+#review .feedback-img {
+  margin-bottom: 20px;
+}
+
 #review .review-about h3 {
   font-size: 36px;
   margin: 0 0 10px 0;
@@ -847,4 +859,23 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #review .form button[type="submit"]:hover {
   cursor: pointer;
+}
+
+.modal-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #1dc8cd;
+}
+
+.modal-content {
+  background: #f0f1ef
+}
+
+.modal-dialog img {
+  max-width: 100%
+}
+
+.modal-dialog button {
+  background-color: #1dc8cd;
+  color: white;
 }
