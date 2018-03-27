@@ -611,7 +611,7 @@
           <div class="col-lg-5 col-md-4">
             <div class="review-about">
               <h3>Submit A Review</h3>
-              <p>If you have attended one of these boot camps in Chicago, we'd love to get your feedback!</p>
+              <p>If you have attended one of these boot camps in Chicago, we would love to get your feedback!</p>
             </div>
           </div>
 
@@ -620,59 +620,107 @@
               <div id="sendmessage">Your review has been sent. Thank you!</div>
               <div id="errormessage"></div>
               <form action="/api/new/review" method="post" role="form" class="reviewForm">
-                <div class="form-row">
-                  <div class="form-group col-lg-6">
-                    <input type="text" name="bootcampName" class="form-control bootcampName form-text" id="bootcampName-input" style="text-align:center;" placeholder="Please type in your Bootcamp name." data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
-                  </div>
+                <!-- <div class="form-row"> -->
+                 <div class="form-row align-items-center">
+                        <div class="col-lg-6 my-1">
+                          <label class="mr-sm-4" for="inlineFormCustomSelect validationServer01">Please select the following Bootcamp you attended.</label>
+                          <select class="custom-select mr-sm-2 is-valid" id="validationServer01" id="inlineFormCustomSelect" name="bootcampName">
+                            <div class="valid-feedback">
+                            <option selected>Choose...</option>
+                            <option value="Actualize">Actualize</option>
+                            <option value="Coding Temple">Coding Temple</option>
+                            <option value="General Assembly">General Assembly</option>
+                            <option value="Coding Dojo">Coding Dojo</option>
+                            <option value="Fullstack Academy">Fullstack Academy</option>
+                            <option value="Northwestern University">Northwestern University</option>
+                            </div>
+                          </select>
+                        </div>
 
+                        <div class="col-lg-6 my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect validationServer01">How would you rate your overall experience?</label>
+                            <select class="custom-select mr-sm-2 is-valid" id="inlineFormCustomSelect" id="validationServer01" name="overallExperience">
+                              <option selected>Choose...</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5 (Highest Rating)</option>
+                            </select>
+                        </div>
+                       
+                        <div class="col-lg-6 my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect validationServer01">Please rate the curriculum of the bootcamp you attended.</label>
+                            <select class="custom-select mr-sm-2 is-valid" id="inlineFormCustomSelect" id="validationServer01" name="curriculum">
+                              <option selected>Choose...</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5 (Highest Rating)</option>
+                            </select>
+                          </div>
 
-                  <!-- <h3><strong>Question 1</strong></h3> --> -->
-                  <h6>Please rate the curriculum on a scale of 1-5, with 5 being the highest rating.</h6>
-                  <select class="chosen-select" id="q1">
-                    <option value="">1</option>
-                    <option value="1"></option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Highest Rating)</option>
-                  </select>
+                          <div class="col-lg-6 my-1">
+                              <label class="mr-sm-2" for="inlineFormCustomSelect validationServer01">Did you find a job after graduation?</label>
+                              <select class="custom-select mr-sm-2 is-valid" id="inlineFormCustomSelect" id="validationServer01" name="jobFound">
+                                <option selected>Choose...</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                              </select>
+                          </div>
+                         
+                          <div class="col-lg-6 my-1">
+                              <label class="mr-sm-2" for="inlineFormCustomSelect validationServer01">How would you rate the instructors overall?</label>
+                              <select class="custom-select mr-sm-2 is-valid" id="inlineFormCustomSelect" id="validationServer01" name="instructor">
+                                <option selected>Choose...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Highest Rating)</option>
+                              </select>
+                            </div>
+                    
+                            <div class="col-lg-6 my-1">
+                                <label class="mr-sm-2" for="inlineFormCustomSelect validationServer01">How would you rate the level of job assistance you received?</label>
+                                <select class="custom-select mr-sm-2 is-valid" id="inlineFormCustomSelect" id="validationServer01" name="jobAssistance">
+                                  <option selected>Choose...</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5 (Highest Rating)</option>
+                                </select>
+                            </div>
 
+                            <div class="col-lg-6 my-1">
+                                <label class="mr-sm-2" for="inlineFormCustomSelect validationServer01">What is your current salary?</label>
+                                <select class="custom-select mr-sm-2 is-valid" id="inlineFormCustomSelect" id="validationServer01" name="salaryRange">
+                                  <option selected>Choose...</option>
+                                  <option value="40000-50000">40000-50000</option>
+                                  <option value="50000-60000">50000-60000</option>
+                                  <option value="60000-70000">60000-70000</option>
+                                  <option value="70000-80000">70000-80000</option>
+                                  <option value="80000+">80000+</option>
+                                </select>
+                            </div>
 
-                  <!-- <div class="form-group col-lg-6">
-                    <input type="text" class="form-control curriculum form-text" name="curriculum" id="curriculum-input" style="text-align:center;" placeholder="Please rate the curriculum on a scale of 1-5" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
-                  </div> -->
-                  <div class="form-group col-lg-6">
-                      <input type="text" name="jobFound" class="form-control jobFound form-text" id="jobFound-input" style="text-align:center;" placeholder="Did you find a job after graduation?" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                      <div class="validation"></div>
-                    </div>
-                <div class="form-group col-lg-6">
-                  <input type="text" class="form-control instructor form-text" name="instructor" id="instructor-input" style="text-align:center;" placeholder="Please rate the instructor on a scale of 1-5"data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group col-lg-6">
-                  <input type="text" name="jobAssistance" size="200" class="form-control jobAsst form-text" id="jobAssistance-input" style="text-align:center;" placeholder="Please rate the job-assitance on a scale of 1 - 5." data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-              
-                
-                <div class="form-group col-lg-6">
-                  <input type="text" name="salaryRange" class="form-control salary form-text" id="salaryRange-input" style="text-align:center;" placeholder="Please type in Your salary range" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group col-lg-6">
-                    <input type="text" name="jobPosition" class="form-control jobPosition form-text" id="jobPosition-input" style="text-align:center;" placeholder="Please type your current job position" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
-                  </div>
-                <div class="form-group col-lg-6">
-                  <input type="text" name="overallExperience" class="form-control experience form-text" id="experience-input" style="text-align:center;" placeholder="Please rate your overall experience" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <!-- <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div> -->
+                            <div class="col-lg-6 my-1">
+                                <label class="mr-sm-2" for="inlineFormCustomSelect validationServer01">What is your current job position?</label>
+                                <select class="custom-select mr-sm-2 is-valid" id="inlineFormCustomSelect" id="validationServer01" name="jobPosition">
+                                  <option selected>Choose...</option>
+                                  <option value="Software Engineer">Software Engineer</option>
+                                  <option value="Project Manager">Project Manager</option>
+                                  <option value="Web Developer">Web Developer</option>
+                                  <option value="Application Engineer">Application Engineer</option>
+                                  <option value="Front End Developer">Front End Developer</option>
+                                  <option value="Back End Developer">Back End Developer</option>
+                                  <option value="Graduate">Graduate</option>
+                                </select>
+                              </div>
+                      </div>
+                <br>
                 <div class="text-center"><button type="submit" title="Send Message">Send Review</button></div>
               </form>
             </div>

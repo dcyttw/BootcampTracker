@@ -41,13 +41,13 @@ module.exports = function(sequelize, DataTypes) {
       },
 
       salaryRange: {
-          type: DataTypes.INTEGER,
+          type: DataTypes.STRING,
           allowNull: false
           
       },
 
       overallExperience: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
       }
 
