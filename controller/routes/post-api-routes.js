@@ -22,16 +22,23 @@ app.post("/api/new/review", function(req, res) {
           // email: field.email
         }).then(function(results) {
 
-        // var newChart = {
+        // var chartObject = {
         //   userExperience: results[i].overallExperience,
+        //   userJob: results[i].jobFound,
         //   userJob: results[i].jobPosition,
         //   userSalary: result[i].salaryRange
         // }
           // for (var i=0; i<results.length; i++){
-        
-            // console.log(results[i].overallExperience);
+
+            // console.log(results[i].bootcampName);
+            // console.log(results[i].curriculum);
+            // console.log(results[i].instructor); 
+            // console.log(results[i].jobAssistance);  
+            // console.log(results[i].jobFound); 
             // console.log(results[i].jobPosition);
-            // console.log(results[i].salaryRange);  
+            // console.log(results[i].salaryRange); 
+            // console.log(results[i].overallExperience);
+      
 
         // }
          
