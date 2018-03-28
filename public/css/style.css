@@ -502,7 +502,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #1dc8cd;
   background: linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .gradient-section-header .gradient-section-divider {
@@ -750,7 +750,7 @@ h4 {
 }
 
 #coding-dojo .icon i:before, #fullstack-academy .icon i:before, #northwestern .icon i:before {
-  background: #367d80;
+  background: white;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
