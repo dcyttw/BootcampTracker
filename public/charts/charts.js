@@ -1,4 +1,4 @@
-
+console.log(hello);
   // Load the AJAX API in our index file
 
       // Load the Visualization API and the corechart package.
