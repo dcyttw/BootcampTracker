@@ -502,7 +502,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #1dc8cd;
   background: linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .gradient-section-header .gradient-section-divider {
@@ -627,10 +627,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 18px;
 }
 
-#bootcamps-overview h4 a {
-  color: #111;
-}
-
 #bootcamps-overview p {
   font-size: 14px;
   margin-left: 100px;
@@ -676,9 +672,21 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 28px;
 }
 
-#aggregated-statistics h4 {
+h4 {
   font-size: 46px;
   color: #1dc8cd;
+  font-weight: 300;
+}
+
+#coding-dojo h4, #northwestern h4 {
+  font-size: 46px;
+  color: white;
+  font-weight: 300;
+}
+
+#fullstack-academy h4 {
+  font-size: 46px;
+  color: white;
   font-weight: 300;
 }
 
@@ -742,7 +750,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #coding-dojo .icon i:before, #fullstack-academy .icon i:before, #northwestern .icon i:before {
-  background: #367d80;
+  background: white;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -778,6 +786,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   padding: 60px 0;
   overflow: hidden;
+}
+
+#review .feedback-img {
+  margin-bottom: 20px;
 }
 
 #review .review-about h3 {
@@ -847,4 +859,23 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #review .form button[type="submit"]:hover {
   cursor: pointer;
+}
+
+.modal-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #1dc8cd;
+}
+
+.modal-content {
+  background: #f0f1ef
+}
+
+.modal-dialog img {
+  max-width: 100%
+}
+
+.modal-dialog button {
+  background-color: #1dc8cd;
+  color: white;
 }
