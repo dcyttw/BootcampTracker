@@ -8,17 +8,18 @@ app.post("/api/new/review", function(req, res) {
         // console.log("Review Data:");
         // console.log(req.body);
 
-        var index = req.body;
+        var field = req.body;
     
         db.Review.create({
-          bootcampName: req.body.bootcampName,
-          curriculum: parseInt(req.body.curriculum),
-          instructor: parseInt(req.body.instructor),
-          jobAssistance: parseInt(req.body.jobAssistance),
-          jobFound: req.body.jobFound, 
-          jobPosition: req.body.jobPosition,
-          salaryRange: parseInt(req.body.salaryRange),
-          overallExperience: parseInt(req.body.overallExperience)
+          bootcampName: field.bootcampName,
+          curriculum: parseInt(field.curriculum),
+          instructor: parseInt(field.instructor),
+          jobAssistance: parseInt(field.jobAssistance),
+          jobFound: field.jobFound, 
+          jobPosition: field.jobPosition,
+          salaryRange: parseInt(field.salaryRange),
+          overallExperience: parseInt(field.overallExperience),
+          // email: field.email
         }).then(function(results) {
 
         // var newChart = {
