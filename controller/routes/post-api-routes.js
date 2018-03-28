@@ -18,7 +18,8 @@ app.post("/api/new/review", function(req, res) {
           jobFound: field.jobFound, 
           jobPosition: field.jobPosition,
           salaryRange: parseInt(field.salaryRange),
-          overallExperience: parseInt(field.overallExperience)
+          overallExperience: parseInt(field.overallExperience),
+          // email: field.email
         }).then(function(results) {
 
         // var newChart = {
