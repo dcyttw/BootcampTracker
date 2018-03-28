@@ -12,7 +12,7 @@
       // draws it.
       function drawChart() {
 
-        // ========== OVERALL RATING CHART ==================//
+        // ========== OVERALL EXPERIENCE RATING CHART ==================//
 
         // Create the data table.
         var data1 = new google.visualization.DataTable();
@@ -38,7 +38,7 @@
         chart.draw(data1, options1);
 
 
-        // ========== JOB POSITION CHART ==================//
+        // ==========OVERALL JOB POSITION CHART ==================//
 
         // Create the data table.
         var data2 = new google.visualization.DataTable();
@@ -67,7 +67,7 @@
         chart.draw(data2, options2);
 
 
-        // ========== JOB FOUND CHART ==================//
+        // ==========OVERALL JOB FOUND CHART ==================//
 
 
          // Create the data table.
@@ -89,7 +89,7 @@
          var chart3= new google.visualization.PieChart(document.getElementById('jobFoundChart'));
          chart.draw(data3, options3);
 
-        // ========== SALARY RANGE CHART ==================//
+        // ========== OVERALL SALARY RANGE CHART ==================//
 
           // Create the data table.
           var data4 = new google.visualization.DataTable();
@@ -114,7 +114,117 @@
           var chart4= new google.visualization.PieChart(document.getElementById('salaryChart'));
           chart4.draw(data4, options4);
 
-        // ========== ACTUALIZE CHART ==================//
+
+        // ========== ACTUALIZE OVERALL EXPERIENCE CHART ================== // 
+        // Create the data table.
+        var Actualizeexperience = new google.visualization.DataTable();
+        Actualizeexperience.addColumn('string', 'Graduates Overall Experience at Actualize');
+        Actualizeexperience.addColumn('number', 'Overall Rating ');
+        Actualizeexperience.addRows([
+          ['1', 3],
+          ['2', 1],
+          ['3', 1],
+          ['4', 1],
+          ['5', 2],
+  
+        ]);
+
+        // Set chart options
+        var Actualizeoptions = {'title':'Actualize Graduates Overall Experience',
+        'width':400,
+        'height':300};
+
+
+        // Instantiate and draw our chart, passing in some options.
+        var ActualizeexperienceChart= new google.visualization.PieChart(document.getElementById('experienceChart'));
+        ActualizeexperienceChart.draw(Actualizeexperience, Actualizeoptions);
+
+
+
+
+         // ========== ACTUALIZE JOB FOUND CHART ==================//
+
+
+         // Create the data table.
+         var ActualizejobFound = new google.visualization.DataTable();
+         ActualizejobFound.addColumn('string', 'Job Found');
+         ActualizejobFound.addColumn('string', 'Answer');
+         ActualizejobFound.addRows([
+           ['Yes', 3],
+           ['No', 1],
+           
+         ]);
+
+         // Set chart options
+        var ActualizejobFoundOptions = {'title':'Employment ratings post graduation',
+        'width':400,
+        'height':300};
+
+         // Instantiate and draw our chart, passing in some options.
+         var ActualizejobFoundChart= new google.visualization.PieChart(document.getElementById(actualize.jobFound));
+         ActualizejobFoundChart.draw(ActualizejobFound, ActualizejobFoundOptions);
+
+
+
+        // ========== ACTUALIZE JOB POSITION CHART ==================//
+
+
+
+
+         // Create the data table.
+         var ActualizePositionData = new google.visualization.DataTable();
+         ActualizePositionData.addColumn('string', 'Job Type');
+         ActualizePositionData.addColumn('number', 'Total Number');
+         ActualizePositionData.addRows([
+           ['Software Engineer', 3],
+           ['Web Developer', 1],
+           ['Application Engineer', 1],
+           ['Front End Developer', 1],
+           ['Back End Developer', 2],
+           ['Project Manager', 2],
+           ['Graduate', 2]
+           
+           
+         ]);
+ 
+         // Set chart options
+         var ActualizePositionOptions = {'title':'Chicago Bootcamp Graduates Employment Positions',
+         'width':400,
+         'height':300};
+ 
+ 
+         // Instantiate and draw our chart, passing in some options.
+         var ActualizeJobPositionChart= new google.visualization.PieChart(document.getElementById('actualize.position'));
+         ActualizeJobPositionChart.draw(ActualizePositionData, ActualizePositionOptions);
+
+
+
+        // ========== ACTUALIZE SALARY CHART ==================//
+
+
+          // Create the data table.
+          var ActualizeSalaryData = new google.visualization.DataTable();
+          ActualizeSalaryData.addColumn('string', 'Salary Range');
+          ActualizeSalaryData.addColumn('number', 'Current Salary');
+          ActualizeSalaryData.addRows([
+            ['40000-50000', 3],
+            ['50000-60000', 1],
+            ['60000-70000', 1],
+            ['70000-80000', 1],
+            ['80000+', 2],
+            
+          ]);
+  
+          // Set chart options
+          var ActualizeSalaryChartOptions = {'title':'Salary Range',
+          'width':400,
+          'height':300};
+  
+  
+          // Instantiate and draw our chart, passing in some options.
+          var ActualizeSalaryChart= new google.visualization.PieChart(document.getElementById('salaryChart'));
+          ActualizeSalaryChart.draw(ActualizeSalaryData, ActualizeSalaryChartOptions);
+
 
         // ========== CODING DOJO CHART ==================//
 
