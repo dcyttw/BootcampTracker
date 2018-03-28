@@ -112,7 +112,22 @@
   
           // Instantiate and draw our chart, passing in some options.
           var chart4= new google.visualization.PieChart(document.getElementById('salaryChart'));
-          chart.draw(data4, options4);
+          chart4.draw(data4, options4);
+
+        // ========== ACTUALIZE CHART ==================//
+
+        // ========== CODING DOJO CHART ==================//
+
+
+     // ========== CODING TEMPLE CHART ==================//
+
+      // ========== FULLSTACK ACADEMY CHART ==================//
+
+      // ========== GENERAL ASSEMBLY CHART ==================//
+
+       // ========== NORTHWESTERN CHART ==================//
+
+
 
         
 
