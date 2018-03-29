@@ -17,7 +17,7 @@ app.post("/api/new/review", function(req, res) {
           jobAssistance: parseInt(field.jobAssistance),
           jobFound: field.jobFound, 
           jobPosition: field.jobPosition,
-          salaryRange: parseInt(field.salaryRange),
+          salaryRange: field.salaryRange,
           overallExperience: parseInt(field.overallExperience),
           // email: field.email
         }).then(function(results) {
@@ -42,7 +42,7 @@ app.post("/api/new/review", function(req, res) {
 
         // }
          
-          return res.redirect("/");
+          return res;
         });
     
       });
