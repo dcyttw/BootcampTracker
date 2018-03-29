@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+.row {
+  margin-bottom: 30px;
+}
+
 /* Back to top button */
 .back-to-top {
   position: fixed;
@@ -739,19 +743,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 h4 {
-  font-size: 46px;
+  font-size: 100px;
   color: #1dc8cd;
   font-weight: 300;
 }
 
-#coding-dojo h4, #northwestern h4 {
-  font-size: 46px;
-  color: white;
-  font-weight: 300;
-}
-
-#fullstack-academy h4 {
-  font-size: 46px;
+#coding-dojo h4, #fullstack-academy h4, #northwestern h4 {
+  font-size: 100px;
   color: white;
   font-weight: 300;
 }
@@ -764,14 +762,8 @@ h4 {
   overflow: hidden;
 }
 
-#coding-dojo, #northwestern {
+#coding-dojo, #fullstack-academy, #northwestern {
   background: #1dc8cd;
-  padding: 60px 0 0 0;
-  overflow: hidden;
-}
-
-#fullstack-academy {
-  background: #42e7ab;
   padding: 60px 0 0 0;
   overflow: hidden;
 }
