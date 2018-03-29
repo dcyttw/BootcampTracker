@@ -104,4 +104,60 @@ jQuery(document).ready(function($) {
 
   // custom code
 
+  /* 
+
+
+GOES IN BODY
+<div id="chart"></div>*/
+
+{/* <button id="btn_refresh">REFRESH</button>  */}
+
+
+// google.charts.load('current', {
+//   callback: init,
+//   packages: ['corechart']
+// })
+// $("#btn_refresh").click(function () {
+//   init();
+// })
+
+// function init() {
+//   var socket = io();
+//   socket.emit('GET');
+//   socket.on('serverSent', function (data) {
+//       var processedData = processData(data);
+//       drawChart(processedData);
+//   });
+// }
+
+// function drawChart(dataArray) {
+//   var data = new google.visualization.DataTable();
+//   data.addColumn('string', 'DateTime');
+//   data.addColumn('number', 'Value');
+//   for (var i = 0; i < dataArray.length; i += 2) {
+//       data.addRow([dataArray[i], dataArray[i + 1]]);
+//   }
+//   var chart = new google.visualization.AreaChart(document.getElementById('chart'));
+//   chart.draw(data, {
+//       title: 'Data Visualization',
+//       isStacked: true,
+//       width: '50%',
+//       height: '50%',
+//       vAxis: {
+//           title: 'Value Axis'
+//       },
+//       hAxis: {
+//           title: 'DateTime Axis'
+//       }
+//   })
+// }
+
+// function processData(data) {
+//   var arr = new Array();
+//   jQuery.each(data, function (index, object) {
+//       arr.push(object['datetime'], pareseInt(object['value']));
+//   })
+//   return arr;
+// }
+
 });

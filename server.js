@@ -6,6 +6,10 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+// var http = require('http').Server(express);
+// var io = require('socket.io')(http);
+
+
 
 // Sets up the Express App
 // =============================================================
@@ -15,6 +19,7 @@ var PORT = process.env.PORT || 8600;
 // Requiring our models for syncing
 var db = require("./models");
 
+   
 // Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
@@ -32,7 +37,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // IMPORTING ROUTES AND GIVING SERVER ACCESS =============//
-require("./controller/routes/html-routes.js")(app);
+// require("./controller/routes/html-routes.js")(app);
 require("./controller/routes/get-api-routes.js")(app);
 require("./controller/routes/post-api-routes.js")(app);
 // app.use("/", routes);

@@ -4,11 +4,12 @@ module.exports = function(app) {
 
 // Add a review
 app.post("/api/new/review", function(req, res) {
+  console.log("new post");
     
         // console.log("Review Data:");
-        // console.log(req.body);
+        // console.log(reqå.body);
 
-        var field = req.body;
+        // var field = req.body;
     
         db.Review.create({
           bootcampName: field.bootcampName,
@@ -17,10 +18,13 @@ app.post("/api/new/review", function(req, res) {
           jobAssistance: parseInt(field.jobAssistance),
           jobFound: field.jobFound, 
           jobPosition: field.jobPosition,
-          salaryRange: parseInt(field.salaryRange),
+          salaryRange: field.salaryRange,
           overallExperience: parseInt(field.overallExperience),
           // email: field.email
         }).then(function(results) {
+
+
+
 
         // var chartObject = {
         //   userExperience: results[i].overallExperience,
@@ -46,5 +50,25 @@ app.post("/api/new/review", function(req, res) {
         });
     
       });
+
+
+
+// function getData(callback){
+//   db.Review.findAll({}).then(function (rows) {
+//     console.log(rows);
+//     return callback(rows);
+//   });
+  
+// }
+
+
+// io.on('connection', function (socket) {
+//   socket.on('GET', function (data) {
+//     getData(function(rows){
+//       console.log(rows);
+//       socket.emit('serverSent', rows);
+//     })
+//   })
+// })
     
-    };
+};

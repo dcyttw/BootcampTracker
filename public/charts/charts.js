@@ -28,14 +28,14 @@
         ]);
 
         // Set chart options
-        var options1 = {'title':'Chicago Bootcamp Graduates Overall Experience',
+        var options1 = {
         'width':400,
         'height':300};
 
 
         // Instantiate and draw our chart, passing in some options.
         var chart1= new google.visualization.PieChart(document.getElementById('experienceChart'));
-        chart.draw(data1, options1);
+        chart1.draw(data1, options1);
 
 
         // ==========OVERALL JOB POSITION CHART ==================//
@@ -64,7 +64,7 @@
 
         // Instantiate and draw our chart, passing in some options.
         var chart2= new google.visualization.PieChart(document.getElementById('jobPositionChart'));
-        chart.draw(data2, options2);
+        chart2.draw(data2, options2);
 
 
         // ==========OVERALL JOB FOUND CHART ==================//
@@ -87,7 +87,7 @@
 
          // Instantiate and draw our chart, passing in some options.
          var chart3= new google.visualization.PieChart(document.getElementById('jobFoundChart'));
-         chart.draw(data3, options3);
+         chart3.draw(data3, options3);
 
         // ========== OVERALL SALARY RANGE CHART ==================//
 
@@ -161,7 +161,7 @@
         'height':300};
 
          // Instantiate and draw our chart, passing in some options.
-         var ActualizejobFoundChart= new google.visualization.PieChart(document.getElementById(actualize.jobFound));
+         var ActualizejobFoundChart= new google.visualization.PieChart(document.getElementById(actualizejobFound));
          ActualizejobFoundChart.draw(ActualizejobFound, ActualizejobFoundOptions);
 
 
