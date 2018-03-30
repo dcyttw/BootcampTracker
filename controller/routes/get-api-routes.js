@@ -2,15 +2,14 @@ var db = require("../../models");
 module.exports = function(app) {
 
     app.get("/", function(req, res){
-        db.Review.findAll(function (data) {
+        db.Review.findAll(function (reviewdata) {
             // console.log("View all review data");            
             var reviewObject = {
             reviewData: data
             };
 
-        // console.log("review object" + JSON.stringify(data));
-
-        return res.render("index", reviewObject);
+        //Future Direction: Working on rendering to index.handlebars template
+        // return res.render("index", reviewObject);
 
         });
     })
@@ -22,7 +21,7 @@ module.exports = function(app) {
         db.Review.findAll({}).then(function(results) {
             // console.log("Find All");
             console.log("review result" + JSON.stringify(results));
-        //   return res.json(results);
+          return res.json(results);
       
         });
     
