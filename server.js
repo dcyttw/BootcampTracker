@@ -35,7 +35,6 @@ app.set("view engine", "handlebars");
 require("./controller/routes/html-routes.js")(app);
 require("./controller/routes/get-api-routes.js")(app);
 require("./controller/routes/post-api-routes.js")(app);
-// app.use("/", routes);
 
 
 // SYNCING OUR SEQUELIZE MODELS AND THEN STARTING OUR EXPRESS APP ============//
