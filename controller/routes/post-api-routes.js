@@ -20,6 +20,7 @@ module.exports = function(app) {
         salaryRange: field.salaryRange,
         overallExperience: parseInt(field.overallExperience),
       }).then(function(results) {
+          // return res.json(results);
           return res;
       });
     
