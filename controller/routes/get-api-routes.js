@@ -6,13 +6,13 @@ module.exports = function(app) {
             // console.log("View all review data");            
             var reviewObject = {
             reviewData: data
-        };
+            };
 
         // console.log("review object" + JSON.stringify(data));
 
         return res.render("index", reviewObject);
 
-    });
+        });
     })
     
       // Get all Reviews
@@ -28,4 +28,4 @@ module.exports = function(app) {
     
       });
 
-    };
+};
