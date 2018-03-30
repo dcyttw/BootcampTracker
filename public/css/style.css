@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-fixed {
   background: #1dc8cd;
   padding: 20px 0;
-  height: 72px;
+  height: 90px;
   transition: all 0.5s;
 }
 
@@ -286,6 +286,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu ul li {
   min-width: 180px;
 }
+
 
 /* Nav Menu Arrows */
 .sf-arrows .sf-with-ul {
