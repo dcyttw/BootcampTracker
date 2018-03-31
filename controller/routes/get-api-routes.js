@@ -1,20 +1,24 @@
-var Review = require("../models/review.js");
+var Review = require("../../models/review.js");
 
 module.exports = function(app) {
 
-    app.get("/", function(req, res){
-        Review.FindAll(function (data) {
+    app.get("/", function(req, res) {
+
+        Review.findAll({}).then(function (data) {
+            
             console.log("View all review data");            
+            
             var reviewObject = {
             reviewData: data
-        };
+            };
+            
+            console.log("review object" + JSON.stringify(data));
 
-        console.log("review object" + JSON.stringify(data));
-
-        return res.render("index", reviewObject);
+            return res.render("index", reviewObject);
+        });
 
     });
-    })
+   
     
       // Get all Reviews
       app.get("/api/all", function(req, res) {
@@ -29,6 +33,6 @@ module.exports = function(app) {
           return res.json(results);
         });
     
-      });
+    });
 
-    };
+};

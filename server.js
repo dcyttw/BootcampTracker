@@ -32,9 +32,9 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // IMPORTING ROUTES AND GIVE SERVER ACCESS =============//
-require("./routes/html-routes.js")(app);
-require("./routes/get-api-routes.js")(app);
-require("./routes/post-api-routes.js")(app);
+// require("./controller/routes/html-routes.js")(app);
+require("./controller/routes/get-api-routes.js")(app);
+require("./controller/routes/post-api-routes.js")(app);
 // app.use("/", routes);
 
 
