@@ -22,14 +22,45 @@ module.exports = function(app) {
       }).then(function(results) {
           // return res.json(results);
 
-          setTimeout(function() {
-            
-          
-
-         }, 300000);
+         
           return res;
       });
     
-  });
+  }); 
+  
+  
+      // Get Updated Form Data to generate charts
+      app.post("/api/chartData", function(req, res) {
+
+        //set initial variables
+        var chartResults = {};
+        var bootcampName = req.body.bootcampName;
     
+        //query database for latest chart numbers
+        db.Review.findAll({
+          where: {bootcampName:bootcampName}
+        }).then(function(results) {
+          var jobFoundYes = 0;
+          var jobFoundNo = 0;
+
+          results.forEach((entry) => {
+
+            // Calculate job found
+            if (entry.jobFound === 'Yes') {
+              jobFoundYes++;
+            } else {
+              jobFoundNo++;
+            }
+          });
+
+          chartResults.jobFound = [
+            ['Yes', jobFoundYes],
+            ['No',  jobFoundNo]
+          ];
+          console.log(chartResults.jobFound);
+
+        //return results as JSON
+          return res.json({data: chartResults});
+        });
+      });
 };

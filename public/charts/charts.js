@@ -5,12 +5,57 @@
       google.charts.load('current', {'packages':['corechart']});
       google.charts.load('current', {'packages':['bar']});
 
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
+      //make chart ajax request
+      var bootcampName = "";
+      var chartData = null;
+      
+      var chartDataRequest = function (){
+      //create standard ajax post request to the server 
+      $.post({
+        url: "/api/chartData",
+        data: {
+          action: "formData",
+          bootcampName: bootcampName
+        },
+        dataType: "json",
+        success: function(responseData, textStatus, xhr){
+          console.log("Success was called: " + JSON.stringify(responseData.data));
+          chartData = responseData.data;
+
+          // Set a callback to run when the Google Visualization API is loaded.
+          google.charts.setOnLoadCallback(drawChart);
+        },
+        error:function(xhr, textStatus, errorThrown){
+          console.log("Error was called: " + errorThrown);
+        }
+      });
+    };
+
+    chartDataRequest();
+
+     //reloads chart data on submission 
+   $('#thank-you-modal').on('shown.bs.modal', function(event){
+    chartDataRequest();      
+   });
+
+   //sets bootcamp Name value on form submission
+   $('[name="bootcampName"]').change(function(){
+     bootcampName = $(this).val();
+     console.log(bootcampName);
+   });
+
+      
+
+   
+
+
 
       // Callback that creates and populates a data table,
       // instantiates the pie chart, passes in the data and
       // draws it.
+
+     //code to get latest data that's been added to the database
+
       function drawChart() {
 
         // ======= AGGREGATED OVERALL EXPERIENCE RATING CHART =========//
@@ -720,15 +765,13 @@
       // ========== NORTHWESTERN CHART ==================//
 
          // ========== NORTHWESTERN JOB FOUND CHART ==============//
+
+         console.log(chartData)
          // Create the data table.
          var northwesternJobData = new google.visualization.DataTable();
          northwesternJobData.addColumn('string', 'Job Found');
          northwesternJobData.addColumn('number', 'Answer');
-         northwesternJobData.addRows([
-           ['Yes', 0],
-           ['No', 5],
-           
-         ]);
+         northwesternJobData.addRows(chartData.jobFound);
 
          // Set chart options
         var northwesternJobOptions = {
@@ -833,4 +876,6 @@
     
 
       }; // END OF ALL CHARTS
+
+
   

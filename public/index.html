@@ -796,7 +796,7 @@
   
             <div class="col-lg-7 col-md-8">
               <div class="form">
-                <form action="/api/new/review" method="post" role="form" class="reviewForm">
+                <form action="/api/new/review" method="post" role="form" class="reviewForm" id="formSubmit">
                   <!-- <div class="form-row"> -->
                    <div class="form-row align-items-center">
                           <div class="col-lg-6 my-1">
@@ -919,7 +919,7 @@
                   <button type="button" class="close" data-dismiss="modal">×</button>
               </div>
               <div class="modal-body">
-                  <img id="thank-you-photo" src="img/complete.gif" alt="">
+                  <img id="thank-you-photo" src="img/complete.gif" alt="complete gif">
               </div>
               <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -935,6 +935,7 @@
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>

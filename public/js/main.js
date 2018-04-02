@@ -1,3 +1,5 @@
+import { setTimeout } from "timers";
+
 jQuery(document).ready(function($) {
 
   // Header fixed and Back to top button
@@ -103,5 +105,4 @@ jQuery(document).ready(function($) {
   });
 
   // custom code
-
 });
