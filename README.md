@@ -6,6 +6,7 @@ Welcome to CCBC STATISTICS - Chicago Coding Bootcamps a full stack web applicati
 Technologies Used:
 
     RESTful API
+    Socket.io
     BOOTSTRAP for Templating
     NodeJS
     Express Server/ExpressJs
