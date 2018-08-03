@@ -6,6 +6,7 @@ Welcome to CCBC STATISTICS - Chicago Coding Bootcamps a full stack web applicati
 Technologies Used:
 
     RESTful API
+    Javascript
     Socket.io
     BOOTSTRAP for Templating
     NodeJS
@@ -13,10 +14,9 @@ Technologies Used:
     AJAX
     MySQL2
 
-Libraries Used
+Libraries/Frameworks Used
 
-    jQuery
-    Javascript 
+    jQuery 
     Google Charts 
     Google Maps
     Bootstrap 4
